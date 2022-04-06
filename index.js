@@ -1,15 +1,12 @@
-function MainContent() {
-  return (
-    <div>
-      <h1>Hello, Madlang People!</h1>
-      <p>This is the main content</p>
+const nav = (
+  <nav>
+    <h1>junick.marco</h1>
+    <ul>
+      <li>Pricing</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+);
 
-      <ul>
-        <li>Hindi ba?</li>
-        <li>Kamusta</li>
-      </ul>
-    </div>
-  );
-}
-
-ReactDOM.render(<MainContent />, document.querySelector("#root"));
+ReactDOM.render(nav, document.getElementById("root"));
