@@ -31,6 +31,10 @@ body {
   padding: 1em;
 }
 
+ol {
+  line-height: 1.5rem;
+}
+
 footer {
   padding: 1em;
   background-color: gray;
