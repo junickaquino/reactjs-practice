@@ -1,12 +1,23 @@
-const nav = (
-  <nav>
-    <h1>junick.marco</h1>
-    <ul>
-      <li>Pricing</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
-  </nav>
-);
+// function fixLogoBg() {
+//   const logo = document.getElementById("react-logo");
+//   logo.style.width = "90px";
+// }
 
-ReactDOM.render(nav, document.getElementById("root"));
+function FunFacts() {
+  return (
+    <div>
+      <img id="react-logo" src="./react-logo.svg" width="40px" />
+      <h1>Fun facts about React</h1>
+      <ul>
+        <li>Was first released in 2013</li>
+        <li>Was originally created by Jordan Walke</li>
+        <li>Has well over 100K stars on Github</li>
+        <li>Is maintained by Facebook</li>
+        <li>Powers thousands of enterprise apps, including mobile apps</li>
+      </ul>
+    </div>
+  );
+}
+
+ReactDOM.render(<FunFacts />, document.getElementById("root"));
+// fixLogoBg();
