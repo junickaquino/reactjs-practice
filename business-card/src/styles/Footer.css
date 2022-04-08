@@ -1,0 +1,12 @@
+.Footer {
+  background-color: #161619;
+  margin-top: 2.75em;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.438em;
+  padding: 1.063em 0;
+}

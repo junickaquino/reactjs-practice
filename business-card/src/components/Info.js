@@ -21,11 +21,15 @@ function Info() {
       </div>
 
       <div className="info--links">
-        <a href="http://" className="btn-email">
+        <a href="#" className="btn-email">
           <img src={emailIcon} alt="Email Icon" className="btn-icon" />
           <p className="btn-text">Email</p>
         </a>
-        <a href="http://" className="btn-linkedin">
+        <a
+          href="https://www.linkedin.com/in/junickmarcoaquino/"
+          target="_blanks"
+          className="btn-linkedin"
+        >
           <img src={linkedinIcon} alt="LinkedIn Icon" className="btn-icon" />
           <p className="btn-text">LinkedIn</p>
         </a>

@@ -31,5 +31,6 @@ p {
   background-color: #1a1b21;
   max-width: 20em;
   border-radius: 1em;
+  overflow: hidden;
   /* margin: 0 auto; */
 }
