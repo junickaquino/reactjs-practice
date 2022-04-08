@@ -1,0 +1,14 @@
+.Interest {
+  padding: 0 2.3em;
+}
+
+.interest--title {
+  font-size: 1.313rem;
+  margin-top: 0.7em;
+  margin-bottom: 0.25em;
+}
+
+.interest--description {
+  font-size: 0.64rem;
+  line-height: 1.4em;
+}
