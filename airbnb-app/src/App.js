@@ -17,7 +17,7 @@ function App() {
         // title={experience.title}
         // price={experience.price}
         // openSpots={experience.openSpots}
-        experience={experience}
+        {...experience}
       />
     );
   });
