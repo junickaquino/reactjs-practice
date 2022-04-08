@@ -1,0 +1,61 @@
+.experiences {
+  padding: 3.063em 2.25em;
+  display: flex;
+  gap: 1.063em;
+}
+
+.card {
+  /* background-color: red; */
+  max-width: 11em;
+  position: relative;
+  color: #222222;
+}
+
+.card--status {
+  position: absolute;
+  top: 0.375em;
+  left: 0.375em;
+  background-color: #fff;
+  border-radius: 0.125em;
+  padding: 0.375em;
+}
+
+.status--text {
+  text-transform: uppercase;
+  font-size: 0.64rem;
+  font-weight: 400;
+  line-height: 0.704rem;
+}
+
+.card--img {
+  width: 100%;
+}
+
+.card--content {
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.content--rates {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.content--rates-star {
+  width: 14px;
+}
+
+.content--rates-count,
+.content--rates-place {
+  color: #918e9b;
+}
+
+.content--price {
+  display: flex;
+  gap: 0.2em;
+}
+
+.price-cost {
+  font-weight: 600;
+}
