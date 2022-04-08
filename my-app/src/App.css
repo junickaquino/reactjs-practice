@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 } */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  background-color: #21222a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8em 2em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.react-logo {
+  /* width: em; */
+  height: 2.5em;
+}
+
+.logo-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #61dafb;
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #deebf8;
+}
