@@ -106,3 +106,8 @@ nav {
   padding-block: 0.6em;
   max-width: 23em;
 }
+
+.list > li::marker {
+  color: #61dafb;
+  font-size: 1.4rem;
+}
