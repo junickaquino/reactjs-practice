@@ -89,6 +89,10 @@ nav {
 */
 .main {
   background-color: #282d35;
+  background-image: url(./reactjs-icon2.png);
+  background-repeat: no-repeat;
+  background-position: right 4em;
+  background-size: 12em;
   height: 100vh;
   padding: 3em 2.5em;
 }
@@ -111,3 +115,10 @@ nav {
   color: #61dafb;
   font-size: 1.4rem;
 }
+
+/* .logo-bg {
+  position: absolute;
+  right: 0;
+  top: 12em;
+  width: 11em;
+} */

@@ -1,6 +1,9 @@
+// import logoBg from "../reactjs-icon2.png";
+
 function Main() {
   return (
     <div className="main">
+      {/* <img src={logoBg} className="logo-bg" alt="logo" /> */}
       <h1 className="title">Fun facts about React</h1>
       <ul className="list">
         <li>Was first released in 2013</li>
