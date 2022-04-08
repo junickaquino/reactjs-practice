@@ -4,11 +4,22 @@ import "../styles/Card.css";
 function Card(props) {
   console.log(props);
 
+  let showBadge = false;
+  if (props.openSpots === 0 || props.status === "Online") {
+    showBadge = true;
+  }
+
   return (
     <div className="card">
-      <div className="card--status">
+      {/* <div className="card--status">
         <p className="status--text">{props.status}</p>
-      </div>
+      </div> */}
+
+      {showBadge && (
+        <div className="card--status">
+          <p className="status--text">{props.status}</p>
+        </div>
+      )}
 
       <img className="card--img" src={`./images/${props.img}`} alt="swimmer" />
 

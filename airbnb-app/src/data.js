@@ -56,7 +56,7 @@ export default [
       reviewCount: 102,
     },
     location: "Moon",
-    openSpots: 2,
+    openSpots: 0,
     status: "Sold Out",
   },
 ];

@@ -8,6 +8,7 @@ function App() {
   const dataCard = data.map((experience) => {
     return (
       <Card
+        key={experience.id}
         img={experience.coverImg}
         status={experience.status}
         rating={experience.stats.rating}
@@ -15,6 +16,7 @@ function App() {
         country={experience.location}
         title={experience.title}
         price={experience.price}
+        openSpots={experience.openSpots}
       />
     );
   });
