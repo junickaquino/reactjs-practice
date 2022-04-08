@@ -42,11 +42,17 @@
 }
 
 body,
+h1,
 h2,
-h3 {
+h3,
+ul {
   margin: 0;
   font-family: "Inter", sans-serif;
 }
+
+/*
+  Navbar COMPONENT
+*/
 
 nav {
   background-color: #21222a;
@@ -76,4 +82,27 @@ nav {
   font-size: 1rem;
   font-weight: 600;
   color: #deebf8;
+}
+
+/*
+  MAIN COMPONENT
+*/
+.main {
+  background-color: #282d35;
+  height: 100vh;
+  padding: 3em 2.5em;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2.4rem;
+  margin-bottom: 0.8em;
+  letter-spacing: -0.1rem;
+}
+
+.list > li {
+  color: #ffffff;
+  /* line-height: 2.5rem; */
+  padding-block: 0.6em;
+  max-width: 23em;
 }
