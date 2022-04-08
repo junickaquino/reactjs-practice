@@ -1,5 +1,5 @@
 import "../styles/Hero.css";
-import heroImg from "../images/hero-img.png";
+// import heroImg from "../images/hero-img.png";
 
 function Hero() {
   const date = new Date();
@@ -17,7 +17,11 @@ function Hero() {
 
   return (
     <div className="hero">
-      <img className="hero--img" src={heroImg} alt="Bunch of images" />
+      <img
+        className="hero--img"
+        src="../images/hero-img.png"
+        alt="Bunch of images"
+      />
       <div className="hero--content">
         <h1 className="hero--content-title">Online Experiences</h1>
         <p className="hero--content-subtitle">

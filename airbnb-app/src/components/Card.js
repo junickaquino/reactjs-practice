@@ -1,6 +1,5 @@
 import "../styles/Card.css";
-// import swimmer from "../images/swimmer.png";
-import star from "../images/star.png";
+// import star from "../images/star.png";
 
 function Card(props) {
   console.log(props);
@@ -11,16 +10,15 @@ function Card(props) {
         <p className="status--text">{props.status}</p>
       </div>
 
-      <img
-        className="card--img"
-        src={props.img}
-        //   src={`../images/${props.img}`}
-        alt="swimmer"
-      />
+      <img className="card--img" src={`./images/${props.img}`} alt="swimmer" />
 
       <div className="card--content">
         <div className="content--rates">
-          <img className="content--rates-star" src={star} alt="star icon" />
+          <img
+            className="content--rates-star"
+            src="../images/star.png"
+            alt="star icon"
+          />
           <p className="content--rates-rating">{props.rating.toFixed(1)}</p>
           <p className="content--rates-count">({props.reviewCount}) • </p>
           <p className="content--rates-place">{props.country}</p>

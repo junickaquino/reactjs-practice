@@ -2,9 +2,6 @@ import "./App.css";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import swimmer from "./images/swimmer.png";
-import wedding from "./images/wedding.png";
-import bike from "./images/bike.png";
 
 function App() {
   return (
@@ -13,8 +10,7 @@ function App() {
       <Hero />
       <div className="experiences">
         <Card
-          // img="swimmer.png"
-          img={swimmer}
+          img="swimmer.png"
           status="Sold Out"
           rating={5.0}
           reviewCount={6}
@@ -24,7 +20,7 @@ function App() {
         />
 
         <Card
-          img={wedding}
+          img="wedding.png"
           status="Online"
           rating={5.0}
           reviewCount={30}
@@ -34,7 +30,7 @@ function App() {
         />
 
         <Card
-          img={bike}
+          img="bike.png"
           status="Sold Out"
           rating={4.8}
           reviewCount={2}
