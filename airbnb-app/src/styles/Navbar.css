@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #fff;
+  height: 4.375em;
+  display: flex;
+  align-items: center;
+  padding: 0 1.875em;
+  box-shadow: 0 2.98px 7.46px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar--logo {
+  max-width: 6.25em;
+}
