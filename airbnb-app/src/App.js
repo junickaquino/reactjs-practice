@@ -2,43 +2,28 @@ import "./App.css";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import data from "./data";
 
 function App() {
+  const dataCard = data.map((experience) => {
+    return (
+      <Card
+        img={experience.coverImg}
+        status={experience.status}
+        rating={experience.stats.rating}
+        reviewCount={experience.stats.reviewCount}
+        country={experience.location}
+        title={experience.title}
+        price={experience.price}
+      />
+    );
+  });
+
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      <div className="experiences">
-        <Card
-          img="swimmer.png"
-          status="Sold Out"
-          rating={5.0}
-          reviewCount={6}
-          country="USA"
-          title="Life lessons with Katie Zafares"
-          price={136}
-        />
-
-        <Card
-          img="wedding.png"
-          status="Online"
-          rating={5.0}
-          reviewCount={30}
-          country="Paris"
-          title="Learn wedding photography"
-          price={125}
-        />
-
-        <Card
-          img="bike.png"
-          status="Sold Out"
-          rating={4.8}
-          reviewCount={2}
-          country="Philippines"
-          title="Group mountain biking"
-          price={50}
-        />
-      </div>
+      <div className="experiences">{dataCard}</div>
     </div>
   );
 }
