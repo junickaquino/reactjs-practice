@@ -16,7 +16,7 @@ function Card() {
           <div className="content--rates">
             <img className="content--rates-star" src={star} alt="star icon" />
             <p className="content--rates-rating">5.0</p>
-            <p className="content--rates-count">(6)</p>
+            <p className="content--rates-count">(6) • </p>
             <p className="content--rates-place">USA</p>
           </div>
 
