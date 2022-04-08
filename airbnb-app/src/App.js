@@ -9,14 +9,15 @@ function App() {
     return (
       <Card
         key={experience.id}
-        img={experience.coverImg}
-        status={experience.status}
-        rating={experience.stats.rating}
-        reviewCount={experience.stats.reviewCount}
-        country={experience.location}
-        title={experience.title}
-        price={experience.price}
-        openSpots={experience.openSpots}
+        // img={experience.coverImg}
+        // status={experience.status}
+        // rating={experience.stats.rating}
+        // reviewCount={experience.stats.reviewCount}
+        // country={experience.location}
+        // title={experience.title}
+        // price={experience.price}
+        // openSpots={experience.openSpots}
+        experience={experience}
       />
     );
   });
