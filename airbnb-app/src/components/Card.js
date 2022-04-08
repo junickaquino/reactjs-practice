@@ -8,7 +8,7 @@ function Card(props) {
   return (
     <div className="card">
       <div className="card--status">
-        <p className="status--text">Sold Out</p>
+        <p className="status--text">{props.status}</p>
       </div>
 
       <img

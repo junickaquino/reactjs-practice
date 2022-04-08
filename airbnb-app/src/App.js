@@ -15,6 +15,7 @@ function App() {
         <Card
           // img="swimmer.png"
           img={swimmer}
+          status="Sold Out"
           rating={5.0}
           reviewCount={6}
           country="USA"
@@ -24,6 +25,7 @@ function App() {
 
         <Card
           img={wedding}
+          status="Online"
           rating={5.0}
           reviewCount={30}
           country="Paris"
@@ -33,6 +35,7 @@ function App() {
 
         <Card
           img={bike}
+          status="Sold Out"
           rating={4.8}
           reviewCount={2}
           country="Philippines"
