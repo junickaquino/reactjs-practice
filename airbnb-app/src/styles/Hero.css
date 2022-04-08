@@ -1,0 +1,28 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--img {
+  max-width: 24.744em;
+  align-self: center;
+  margin-top: 1.625em;
+}
+
+.hero--content {
+  margin-top: 1.25em;
+  padding: 0 2.25em;
+}
+
+.hero--content-title {
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin-bottom: 0.3em;
+}
+
+.hero--content-subtitle {
+  font-weight: 300;
+  font-size: 1rem;
+  max-width: 20em;
+  line-height: 110%;
+}
