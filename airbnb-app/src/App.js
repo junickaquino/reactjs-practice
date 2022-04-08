@@ -2,13 +2,44 @@ import "./App.css";
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import swimmer from "./images/swimmer.png";
+import wedding from "./images/wedding.png";
+import bike from "./images/bike.png";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      <Card />
+      <div className="experiences">
+        <Card
+          // img="swimmer.png"
+          img={swimmer}
+          rating={5.0}
+          reviewCount={6}
+          country="USA"
+          title="Life lessons with Katie Zafares"
+          price={136}
+        />
+
+        <Card
+          img={wedding}
+          rating={5.0}
+          reviewCount={30}
+          country="Paris"
+          title="Learn wedding photography"
+          price={125}
+        />
+
+        <Card
+          img={bike}
+          rating={4.8}
+          reviewCount={2}
+          country="Philippines"
+          title="Group mountain biking"
+          price={50}
+        />
+      </div>
     </div>
   );
 }

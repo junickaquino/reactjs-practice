@@ -11,3 +11,11 @@ p {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
+.experiences {
+  padding: 3.063em 2.25em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.063em;
+}
