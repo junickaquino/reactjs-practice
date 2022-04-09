@@ -28,3 +28,8 @@
   margin-top: 0.938em;
   cursor: pointer;
 }
+
+.meme--img {
+  margin-top: 2em;
+  max-width: 100%;
+}

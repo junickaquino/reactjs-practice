@@ -1,14 +1,16 @@
+import React from "react";
 import "../styles/Meme.css";
 
 import memesData from "../memesData";
 
 function Meme() {
-  function getRandomMeme() {
-    const memesArray = memesData.data.memes;
-    const randomNum = Math.floor(Math.random() * memesArray.length);
-    const url = memesData.data.memes[randomNum].url;
+  const memesArray = memesData.data.memes;
+  const randomNum = Math.floor(Math.random() * memesArray.length);
+  const [url, setUrl] = React.useState("memesData.data.memes[randomNum].url");
 
-    console.log(url);
+  function getRandomMeme() {
+    setUrl(memesData.data.memes[randomNum].url);
+    return url;
   }
 
   return (
@@ -33,6 +35,8 @@ function Meme() {
           value="Get a new meme image 🖼"
         />
       </div>
+
+      <img className="meme--img" src={url} alt="meme" />
     </div>
   );
 }
