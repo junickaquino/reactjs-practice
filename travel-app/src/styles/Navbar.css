@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #f55a5a;
+  min-height: 3.438em;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.logo--img {
+  width: 1.5em;
+}
+
+.logo--text {
+  font-size: 0.904rem;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.03rem;
+}
