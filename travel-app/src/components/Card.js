@@ -1,14 +1,14 @@
 import "../styles/Card.css";
 import pin from "../images/pin.png";
 
-function Card() {
+function Card(props) {
   return (
     <div className="card">
       <div className="card--image">
         <img
           className="image-img"
-          src="https://source.unsplash.com/WLxQvbMyfas"
-          alt="Picture of Mount Fuji"
+          src={props.place.imageUrl}
+          alt={`Picture of ${props.place.title}`}
         />
       </div>
 
@@ -16,29 +16,29 @@ function Card() {
         <div className="content--location">
           <div className="location--pin_place">
             <img className="pin_place--pin-img" src={pin} alt="pin icon" />
-            <p className="pin_place--place-text">Japan</p>
+            <p className="pin_place--place-text">{props.place.location}</p>
           </div>
 
           <div className="location--maps">
-            <a className="maps-google" href="#" target="_blank">
+            <a
+              className="maps-google"
+              href={props.place.googleMapsUrl}
+              target="_blank"
+            >
               View on Google Maps
             </a>
           </div>
         </div>
 
-        <h1 className="content--title">Mount Fuji</h1>
+        <h1 className="content--title">{props.place.title}</h1>
 
         <div className="content--subtitle">
-          <p className="subtitle--date-start">12 Jan, 2021</p>
+          <p className="subtitle--date-start">{props.place.startDate}</p>
           <p>-</p>
-          <p className="subtitle--date-end">24 Jan, 2021</p>
+          <p className="subtitle--date-end">{props.place.endDate}</p>
         </div>
 
-        <p className="content--description">
-          Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters
-          (12,380 feet). Mount Fuji is the single most popular tourist site in
-          Japan, for both Japanese and foreign tourists.
-        </p>
+        <p className="content--description">{props.place.description}</p>
       </div>
     </div>
   );
