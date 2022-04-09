@@ -1,0 +1,31 @@
+.header {
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  max-height: 4.063em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  padding: 1.188em 1.25em;
+}
+
+.header--logo {
+  display: flex;
+  align-items: center;
+  gap: 0.438em;
+}
+
+.logo--img {
+  width: 1.957em;
+}
+
+.logo--text {
+  font-size: 1.297rem;
+  font-family: 700;
+  letter-spacing: -0.08rem;
+}
+
+.project--title {
+  font-size: 0.75rem;
+  font-family: "Inter";
+  font-weight: 500;
+}
