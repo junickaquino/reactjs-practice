@@ -4,13 +4,31 @@ import "../styles/Meme.css";
 import memesData from "../memesData";
 
 function Meme() {
-  const memesArray = memesData.data.memes;
-  const randomNum = Math.floor(Math.random() * memesArray.length);
-  const [url, setUrl] = React.useState("memesData.data.memes[randomNum].url");
+  const meme = {
+    topText: " ",
+    bottomText: " ",
+    randomImage: "https://i.imgflip.com/39t1o.jpg",
+  };
+
+  const [memeCaption, setMemeCaption] = React.useState(meme);
+
+  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
 
   function getRandomMeme() {
-    setUrl(memesData.data.memes[randomNum].url);
-    return url;
+    const memesArray = allMemeImages.data.memes;
+
+    // Gets a random image url from the memesData.
+    const randomNum = Math.floor(Math.random() * memesArray.length);
+    const randomUrl = memesArray[randomNum].url;
+    console.log("Retrieved meme url: " + randomUrl);
+
+    // Update Meme caption with the new url.
+    setMemeCaption((prevMemeCaption) => ({
+      ...prevMemeCaption,
+      randomImage: randomUrl,
+    }));
+
+    return memeCaption;
   }
 
   return (
@@ -36,7 +54,7 @@ function Meme() {
         />
       </div>
 
-      <img className="meme--img" src={url} alt="meme" />
+      <img className="meme--img" src={memeCaption.randomImage} alt="meme" />
     </div>
   );
 }
