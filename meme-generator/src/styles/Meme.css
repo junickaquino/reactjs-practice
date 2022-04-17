@@ -29,7 +29,39 @@
   cursor: pointer;
 }
 
+.meme-image {
+  position: relative;
+}
+
 .meme--img {
   margin-top: 2em;
   max-width: 100%;
+}
+
+.meme--caption-top,
+.meme--caption-bottom {
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+  font-family: impact;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000,
+    -2px 0px 0 #000, 2px 2px 5px #000;
+  width: 90%;
+  text-align: center;
+}
+
+.meme--caption-top {
+  position: absolute;
+  top: 1.5em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.meme--caption-bottom {
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  transform: translate(-50%, 0);
 }

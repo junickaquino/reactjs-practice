@@ -5,8 +5,8 @@ import memesData from "../memesData";
 
 function Meme() {
   const meme = {
-    topText: " ",
-    bottomText: " ",
+    topText: "",
+    bottomText: "",
     randomImage: "https://i.imgflip.com/39t1o.jpg",
   };
 
@@ -31,6 +31,15 @@ function Meme() {
     return memeCaption;
   }
 
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setMemeCaption((prevMemeCaption) => ({
+      ...prevMemeCaption,
+      [name]: value,
+    }));
+  }
+
   return (
     <div className="meme">
       <div className="form" action="">
@@ -39,11 +48,17 @@ function Meme() {
             className="form--input-text"
             type="text"
             placeholder="Top text"
+            name="topText"
+            value={memeCaption.topText}
+            onChange={handleChange}
           />
           <input
             className="form--input-text"
             type="text"
             placeholder="Bottom text"
+            name="bottomText"
+            value={memeCaption.bottomText}
+            onChange={handleChange}
           />
         </div>
         <input
@@ -54,7 +69,11 @@ function Meme() {
         />
       </div>
 
-      <img className="meme--img" src={memeCaption.randomImage} alt="meme" />
+      <div className="meme-image">
+        <img className="meme--img" src={memeCaption.randomImage} alt="meme" />
+        <h1 className="meme--caption-top">{memeCaption.topText}</h1>
+        <h1 className="meme--caption-bottom">{memeCaption.bottomText}</h1>
+      </div>
     </div>
   );
 }
