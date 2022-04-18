@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Meme.css";
 
-import memesData from "../memesData";
+// import memesData from "../memesData";
 
 function Meme() {
   const meme = {
@@ -12,14 +12,19 @@ function Meme() {
 
   const [memeCaption, setMemeCaption] = React.useState(meme);
 
-  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+  const [allMemes, setAllMemes] = React.useState({});
+
+  React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((res) => res.json())
+      .then((data) => setAllMemes(data.data.memes));
+    console.log(allMemes);
+  }, []);
 
   function getRandomMeme() {
-    const memesArray = allMemeImages.data.memes;
-
     // Gets a random image url from the memesData.
-    const randomNum = Math.floor(Math.random() * memesArray.length);
-    const randomUrl = memesArray[randomNum].url;
+    const randomNum = Math.floor(Math.random() * allMemes.length);
+    const randomUrl = allMemes[randomNum].url;
     console.log("Retrieved meme url: " + randomUrl);
 
     // Update Meme caption with the new url.
