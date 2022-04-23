@@ -1,7 +1,12 @@
 import React from "react";
+import "./styles/AppStyle.css";
 
 const App = () => {
-  return <h1> Hello React!</h1>;
+  return (
+    <main>
+      <div className="card">Hello</div>
+    </main>
+  );
 };
 
 export default App;
