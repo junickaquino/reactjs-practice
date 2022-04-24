@@ -16,6 +16,7 @@ const App = () => {
 
       if (isAllHeld && isAllValueMatched) {
         console.log("You won!");
+        setTenzies(true);
       }
     },
     [dice]
@@ -65,7 +66,12 @@ const App = () => {
   function rollDice() {
     setDice((prevDice) => {
       return prevDice.map((die) => {
-        return !die.isHeld ? generateDie() : die;
+        if (tenzies) {
+          setTenzies(false);
+          return generateDie();
+        } else {
+          return !die.isHeld ? generateDie() : die;
+        }
       });
     });
   }
@@ -75,7 +81,7 @@ const App = () => {
       <div className="card">
         <div className="dice-container">{mapDice}</div>
         <button className="btn-roll" onClick={rollDice}>
-          Roll
+          {tenzies ? "New Game" : "Roll"}
         </button>
       </div>
     </main>
