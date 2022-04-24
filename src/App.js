@@ -1,6 +1,7 @@
 import React from "react";
 import Die from "./components/Die";
 import RollCounter from "./components/RollCounter";
+import Scoreboard from "./components/Scoreboard";
 
 import "./styles/AppStyle.css";
 import { nanoid } from "nanoid";
@@ -10,6 +11,9 @@ const App = () => {
   const [dice, setDice] = React.useState(allNewDice());
   const [tenzies, setTenzies] = React.useState(false);
   const [count, setCount] = React.useState(0);
+  const [scores, setScores] = React.useState(
+    () => JSON.parse(localStorage.getItem("scores")) || []
+  );
 
   React.useEffect(
     function () {
@@ -20,10 +24,28 @@ const App = () => {
 
       if (isAllHeld && isAllValueMatched) {
         console.log("You won!");
+
+        const newScore = {
+          rolls: count,
+          time: "30 sec",
+        };
+
+        setScores((prevScores) => {
+          return [...prevScores, newScore];
+        });
+
         setTenzies(true);
       }
     },
     [dice]
+  );
+
+  React.useEffect(
+    function () {
+      console.log(scores);
+      localStorage.setItem("scores", JSON.stringify(scores));
+    },
+    [tenzies]
   );
 
   function generateDie() {
@@ -103,6 +125,8 @@ const App = () => {
           {tenzies ? "New Game" : "Roll"}
         </button>
       </div>
+
+      <Scoreboard rolls={scores.rolls} />
     </main>
   );
 };

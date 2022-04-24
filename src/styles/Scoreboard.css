@@ -1,0 +1,21 @@
+.scoreboard-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  min-width: 25em;
+}
+
+.board-title {
+  color: antiquewhite;
+  font-size: 1.5rem;
+}
+
+.score-data {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.data-rank {
+  color: yellow;
+}
