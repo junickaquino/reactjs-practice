@@ -45,10 +45,17 @@ const App = () => {
     });
   }
 
+  function rollDice() {
+    setDice(allNewDice());
+  }
+
   return (
     <main>
       <div className="card">
         <div className="dice-container">{mapDice}</div>
+        <button className="btn-roll" onClick={rollDice}>
+          Roll
+        </button>
       </div>
     </main>
   );
