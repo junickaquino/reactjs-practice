@@ -1,5 +1,7 @@
 import React from "react";
 import Die from "./components/Die";
+import RollCounter from "./components/RollCounter";
+
 import "./styles/AppStyle.css";
 import { nanoid } from "nanoid";
 import Confetti from "react-confetti";
@@ -7,6 +9,7 @@ import Confetti from "react-confetti";
 const App = () => {
   const [dice, setDice] = React.useState(allNewDice());
   const [tenzies, setTenzies] = React.useState(false);
+  const [count, setCount] = React.useState(0);
 
   React.useEffect(
     function () {
@@ -65,10 +68,13 @@ const App = () => {
   }
 
   function rollDice() {
+    setCount((prevCount) => prevCount + 1);
+
     setDice((prevDice) => {
       return prevDice.map((die) => {
         if (tenzies) {
           setTenzies(false);
+          setCount(0);
           return generateDie();
         } else {
           return !die.isHeld ? generateDie() : die;
@@ -80,6 +86,9 @@ const App = () => {
   return (
     <main>
       {tenzies && <Confetti />}
+
+      <RollCounter count={count} />
+
       <div className="card">
         <div className="card__desc">
           <h1 className="card__desc--title">Tenzies</h1>
