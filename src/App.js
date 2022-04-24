@@ -5,6 +5,21 @@ import { nanoid } from "nanoid";
 
 const App = () => {
   const [dice, setDice] = React.useState(allNewDice());
+  const [tenzies, setTenzies] = React.useState(false);
+
+  React.useEffect(
+    function () {
+      const isAllHeld = dice.every((die) => die.isHeld);
+      const isAllValueMatched = dice.every(
+        (die) => die.value === dice[0].value
+      );
+
+      if (isAllHeld && isAllValueMatched) {
+        console.log("You won!");
+      }
+    },
+    [dice]
+  );
 
   function generateDie() {
     return {
