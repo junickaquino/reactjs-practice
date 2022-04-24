@@ -7,7 +7,11 @@ const Die = (props) => {
   };
 
   return (
-    <div className="die-face" style={styles}>
+    <div
+      className="die-face"
+      style={styles}
+      onClick={() => props.toggleHeld(props.id)}
+    >
       {props.value}
     </div>
   );
