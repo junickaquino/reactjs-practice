@@ -6,6 +6,11 @@ body {
   font-family: "Karla", sans-serif;
 }
 
+h1,
+p {
+  margin: 0;
+}
+
 main {
   height: 100vh;
   display: flex;
@@ -22,6 +27,15 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+.card__desc {
+  max-width: 18em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2em;
 }
 
 .dice-container {
@@ -41,6 +55,7 @@ main {
   font-weight: 700;
   border-radius: 0.5em;
   cursor: pointer;
+  margin-bottom: 2em;
 }
 
 .btn-roll:active {
