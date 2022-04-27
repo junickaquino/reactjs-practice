@@ -42,7 +42,6 @@ const App = () => {
 
   React.useEffect(
     function () {
-      console.log(scores);
       localStorage.setItem("scores", JSON.stringify(scores));
     },
     [tenzies]
@@ -105,6 +104,16 @@ const App = () => {
     });
   }
 
+  const topScores = () => {
+    let sortedScores = scores.sort(function (a, b) {
+      return a.rolls - b.rolls;
+    });
+
+    sortedScores = sortedScores.slice(0, 5);
+
+    return sortedScores;
+  };
+
   return (
     <main>
       {tenzies && <Confetti />}
@@ -126,7 +135,7 @@ const App = () => {
         </button>
       </div>
 
-      <Scoreboard rolls={scores.rolls} />
+      <Scoreboard scores={topScores()} />
     </main>
   );
 };
